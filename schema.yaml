@@ -210,7 +210,7 @@ variables:
     description: "Ammount of OCPUs per worker node"
     minimum: 1
     maximum: 64
-    default: 4
+    default: 2
     required: true
     visible:
       or:
@@ -230,18 +230,18 @@ variables:
     description: "Ammount of RAM Memory in GB per worker node"
     minimum: 1
     maximum: 1024
-    default: 16
+    default: 8
     required: true
     visible:
       or:
         - eq:
-          - compute_shape
+          - worker_shape
           - "VM.Standard.E3.Flex"
         - eq:
-          - compute_shape
+          - worker_shape
           - "VM.Standard.E4.Flex"
         - eq:
-          - compute_shape
+          - worker_shape
           - "VM.Standard.A1.Flex"
 
   worker_bv_size:

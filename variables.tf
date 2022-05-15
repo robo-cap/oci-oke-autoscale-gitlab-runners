@@ -93,12 +93,6 @@ variable "gitlab_runner_token" {
 
 ## Autoscaler parameters
 
-variable "autoscaler_image" {
-  type        = string
-  description = "Autoscaler deployment base image"
-  default     = "iad.ocir.io/oracle/oci-cluster-autoscaler:1.22.2-4"
-}
-
 variable "min_number_of_nodes" {
   type        = number
   description = "Minimum number of nodes in the node pool"

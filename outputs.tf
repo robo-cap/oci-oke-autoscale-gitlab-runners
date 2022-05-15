@@ -1,2 +1,12 @@
 // Copyright (c) 2022, Oracle and/or its affiliates. All rights reserved.
 // Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
+
+output "cluster_instruction" {
+value = <<EOT
+1.  Open OCI Cloud Shell.
+2.  Execute below command to setup OKE cluster access:
+$ oci ce cluster create-kubeconfig --region ${var.region} --cluster-id ${oci_containerengine_cluster.k8_cluster.id}
+3.  List gitlab runner deployments:
+$ kubectl get deployments --namespace ${var.gitlab_runner_namespace}
+EOT
+}

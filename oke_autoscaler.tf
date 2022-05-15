@@ -5,7 +5,7 @@
 data "template_file" "autoscaler_deployment" {
   template = "${file("${path.module}/templates/autoscaler.template.yaml")}"
   vars     = {
-      autoscaler_image = "${var.autoscaler_image}"
+      autoscaler_image = "${lookup(local.autoscaler_image, var.kubernetes_version)}"
       min_nodes        = "${var.min_number_of_nodes}"
       max_nodes        = "${var.max_number_of_nodes}"
       node_pool_id     = "${oci_containerengine_node_pool.nodepool.id}"

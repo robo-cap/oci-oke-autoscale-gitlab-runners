@@ -27,4 +27,10 @@ locals {
   tcp_protocol_number                     = "6"
   icmp_protocol_number                    = "1"
   all_protocols                           = "all"
+
+  # List with supported autoscaler images: https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengusingclusterautoscaler.htm
+  autoscaler_image = {
+    "v1.22.5" = "iad.ocir.io/oracle/oci-cluster-autoscaler:1.22.2-4",
+    "v1.21.5" = "iad.ocir.io/oracle/oci-cluster-autoscaler:1.21.1-3"
+  }
 }
