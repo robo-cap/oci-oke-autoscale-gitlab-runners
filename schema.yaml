@@ -68,7 +68,6 @@ variableGroups:
   variables:
     - min_number_of_nodes
     - max_number_of_nodes
-    - autoscaler_image
 
 - title: Internal Variables
   visible: false
@@ -268,13 +267,6 @@ variables:
     type: oci:core:ssh:publickey
     title: "Upload public SSH key to access worker nodes"
     description: "Public SSH key will be used to authorize ssh connection to worker nodes"
-
-  autoscaler_image:
-    type: string
-    title: "OKE autoscaler deployment base image."
-    description: "More information here:  https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengusingclusterautoscaler.htm#Using_the_Kubernetes_Cluster_Autoscaler"
-    default: "iad.ocir.io/oracle/oci-cluster-autoscaler:1.22.2-4"
-    required: true
 
   min_number_of_nodes:
     type: integer
