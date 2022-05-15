@@ -1,6 +1,6 @@
 title: "Gitlab runners on OKE."
-stackDescription: "Deploy Gitlab runners on OKE cluster with node pool autoscaling." 
-description: "This module creates an OKE cluster with node pool autoscaling. Gitlab runner is deployed on created OKE cluster."
+stackDescription: "Gitlab runner deployment on OKE cluster with node pool autoscaling." 
+description: "This stack creates an OKE cluster with node pool autoscaling. Gitlab runner is deployed on created OKE cluster."
 schemaVersion: 1.1.0
 version: "20190404"
 locale: "en"
@@ -309,3 +309,16 @@ variables:
     description: "Gitlab registration token."
     required: true
     default: "GitlabRunner-TOKEN"
+
+outputs:
+  cluster_context_setup:
+    title: "OKE context setup (Cloud Shell)"
+    displayText: ${Messages.solutionsHub.solutions.ociDevTools.outputs.cluster_context_setup.displayText()}
+    type: string
+    visible: true
+
+  list_gr_deployments:
+    title: "List deployments"
+    displayText: ${Messages.solutionsHub.solutions.ociDevTools.outputs.list_gr_deployments.displayText()}
+    type: string
+    visible: true

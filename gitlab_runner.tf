@@ -37,5 +37,6 @@ resource null_resource "install_gitlab_runner" {
   
   triggers = {
     values = local_file.gitlab_runner_installer[count.index].content
+    instances = var.gitlab_runner_instances
   }
 }

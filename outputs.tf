@@ -10,3 +10,11 @@ $ oci ce cluster create-kubeconfig --region ${var.region} --cluster-id ${oci_con
 $ kubectl get deployments --namespace ${var.gitlab_runner_namespace}
 EOT
 }
+
+output "cluster_context_setup" {
+    value = "oci ce cluster create-kubeconfig --region ${var.region} --cluster-id ${oci_containerengine_cluster.k8_cluster.id}"
+}
+
+output "list_gr_deployments" {
+    value = "kubectl get deployments --namespace ${var.gitlab_runner_namespace}"
+}
