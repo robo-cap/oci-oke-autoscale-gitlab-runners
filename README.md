@@ -31,7 +31,7 @@ Gitlab runners will handle pending CI/CD jobs and will book, by default, 0.2 CPU
 
 You may use below link and take advantage of one click deployment to Oracle Cloud via OCI Resource Manager Service.
 
-[![Deploy to OCI](https://docs.oracle.com/en-us/iaas/Content/Resources/Images/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/robo-cap/oci-oke-autoscale-gitlab-runners/archive/refs/tags/v0.0.2.zip)
+[![Deploy to OCI](https://docs.oracle.com/en-us/iaas/Content/Resources/Images/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/robo-cap/oci-oke-autoscale-gitlab-runners/archive/refs/tags/v0.0.1.zip)
 
 
 ## Check status
